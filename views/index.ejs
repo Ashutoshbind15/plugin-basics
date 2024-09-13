@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= room.name %></title>
+  </head>
+  <body>
+    <h1><%= room.name %></h1>
+    <p><%= room.description %></p>
+    <% if (room.options.length > 0) { %>
+    <h2>Options:</h2>
+    <ul>
+      <% room.options.forEach(function(option) { %>
+      <li><a href="/room/<%= option %>"><%= option %></a></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <p>No available options.</p>
+    <% } %>
+  </body>
+</html>
